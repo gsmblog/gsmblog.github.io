@@ -28,39 +28,15 @@
 
     gtag('config', 'UA-213985754-1');
   </script>
-  <script type='text/javascript'>
+ 	<script>
+    // Selecting the iframe element
+    var iframe = document.getElementById("myIframe");
     
-    $(function(){
-    
-        var iFrames = $('iframe');
-      
-    	function iResize() {
-    	
-    		for (var i = 0, j = iFrames.length; i < j; i++) {
-    		  iFrames[i].style.height = iFrames[i].contentWindow.document.body.offsetHeight + 'px';}
-    	    }
-    	    
-        	if ($.browser.safari || $.browser.opera) { 
-        	
-        	   iFrames.load(function(){
-        	       setTimeout(iResize, 0);
-               });
-            
-        	   for (var i = 0, j = iFrames.length; i < j; i++) {
-        			var iSource = iFrames[i].src;
-        			iFrames[i].src = '';
-        			iFrames[i].src = iSource;
-               }
-               
-        	} else {
-        	   iFrames.load(function() { 
-        	       this.style.height = this.contentWindow.document.body.offsetHeight + 'px';
-        	   });
-        	}
-        
-        });
-
-</script>
+    // Adjusting the iframe height onload event
+    iframe.onload = function(){
+        iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
+    }
+    </script>
 </body>
 
 </html>
