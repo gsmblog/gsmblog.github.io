@@ -5,17 +5,17 @@
   --fs-600: 1.875rem;
   --fs-700: 2rem;
 
-  --ff-body: "Roboto", sans-serif;
+  --ff-body: 'OfficeCodePro';
   --ff-heading: 'OfficeCodePro';
 
   --fw-400: 400;
   --fw-700: 700;
   --fw-900: 900;
 
-  --clr-primary-200: hsla(169, 70%, 95%, 1);
-  --clr-primary-300: hsla(169, 100%, 39%, 1);
-  --clr-primary-400: hsla(169, 100%, 26%, 1);
-  --clr-primary-500: hsla(169, 100%, 16%, 1);
+  --clr-primary-200: #ffd7b5;
+  --clr-primary-300: #ff9248;
+  --clr-primary-400: #ff9248;
+  --clr-primary-500: #ff6700;
 
   --clr-neutral-100: hsla(0, 0%, 100%, 1);
   --clr-neutral-300: hsla(0, 0%, 50%, 1);
@@ -254,7 +254,7 @@ section,
 
 .site-footer {
   --logo-color: currentColor;
-  padding: 2em 0;
+  padding: 1em 0;
   color: var(--clr-neutral-100);
   background-color: var(--clr-primary-500);
   text-align: center;
