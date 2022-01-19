@@ -6,11 +6,11 @@
   --fs-700: 2rem;
 
   --ff-body: 'OfficeCodePro';
-  --ff-heading: 'OfficeCodePro';
+  --ff-heading: 'OfficeCodeProB';
 
   --fw-400: 400;
   --fw-700: 700;
-  --fw-900: 900;
+  --fw-900: 'OfficeCodeProB';
 
   --clr-primary-200: #ffd7b5;
   --clr-primary-300: #ff9248;
@@ -38,6 +38,11 @@
     font-family: 'OfficeCodePro';
     src: url(./assets/OfficeCodeProD-Regular.otf)
 }
+@font-face {
+  font-family: 'OfficeCodeProB';
+  src: url(./assets/OfficeCodeProD-Bold.otf)
+}
+
 /* Box sizing rules */
 *,
 *::before,
@@ -88,7 +93,15 @@ body {
 a:not([class]) {
   text-decoration-skip-ink: auto;
 }
+a:hover,a:focus{
+  cursor: pointer;
+}
 
+/*Span bold */
+.bold{
+  font-weight: bold;color: var(--clr-primary-300);
+  font-style: italic;
+}
 /* Make images easier to work with */
 img,
 picture {
@@ -128,6 +141,7 @@ body {
   font-family: var(--ff-body);
   font-size: var(--fs-400);
   color: var(--clr-neutral-900);
+  background-color: var(--clr-primary-200);
 }
 
 h1,
@@ -298,7 +312,7 @@ section,
   /////////////////////// */
 
   .main-article {
-    margin-bottom: 3rem;
+    margin-bottom: 3rem;background-color: var(--clr-primary-200);
   }
 
   .main-article__figure figcaption {
@@ -321,6 +335,7 @@ section,
     "body"
     "button";
     padding: 0 8px;
+    margin: 0 0 50px 0;
 }
 
 .snippet__image {
@@ -351,7 +366,7 @@ section,
 
 .snippet__title a {
   color: inherit;
-  text-decoration: none;
+  text-decoration: none;font-family: 'OfficeCodeProB';
 }
 
 .snippet__title a:hover,
