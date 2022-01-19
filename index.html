@@ -13,7 +13,7 @@
 <body>
   <iframe id="iframe" src="nav.html" frameborder="0" srcolling="no" style="width: 100%;"></iframe>
 
-  <iframe id="iframe" src="main.html" frameborder="0" srcolling="no" onload='javascript:(function(o){o.style.height=o.contentWindow.document.body.scrollHeight+"px";}(this));' style="height:200px;width:100%;border:none;overflow:hidden;"></iframe>
+  <iframe id="iframe" src="./assets/blog/overview/mtp-err0r-overv.html" frameborder="0" srcolling="no" onload='javascript:(function(o){o.style.height=o.contentWindow.document.body.scrollHeight+"px";}(this));' style="height:200px;width:100%;border:none;overflow:hidden;"></iframe>
 
   <iframe id="iframe" src="footer.html" frameborder="0" scrolling="no" style="overflow-y: hidden;width:100%;height: 190px"></iframe>
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -28,14 +28,23 @@
 
     gtag('config', 'UA-213985754-1');
   </script>
+  
  	<script>
-    // Selecting the iframe element
-    var iframe = document.getElementById("myIframe");
-    
-    // Adjusting the iframe height onload event
-    iframe.onload = function(){
-        iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
-    }
+var index = 1;
+var tempImg = new Image();
+tempImg.onload = function(){
+   appendImage();
+}
+var tryLoadImage = function( index ){
+   tempImg.src = 'images/' + index + '.jpg';
+}
+var appendImage = function(){
+   var img = document.createElement('img');
+   img.src = tempImg.src;
+   document.body.appendChild( img )
+   tryLoadImage( index++ )
+}
+tryLoadImage( index );
     </script>
 </body>
 
