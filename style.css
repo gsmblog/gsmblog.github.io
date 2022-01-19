@@ -320,6 +320,7 @@ section,
     "meta"
     "body"
     "button";
+    padding: 0 8px;
 }
 
 .snippet__image {

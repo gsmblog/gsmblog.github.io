@@ -31,12 +31,12 @@
   
  	<script>
 var index = 1;
-var tempImg = new Image();
+var tempImg = new iframe();
 tempImg.onload = function(){
-   appendImage();
+   appendIframe();
 }
 var tryLoadImage = function( index ){
-   tempImg.src = 'images/' + index + '.jpg';
+   tempImg.src = '' + index + '.jpg';
 }
 var appendImage = function(){
    var img = document.createElement('img');
