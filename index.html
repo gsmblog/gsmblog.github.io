@@ -13,11 +13,63 @@
 <body>
   <iframe id="iframe" src="nav.html" frameborder="0" scrolling="no" style="width: 100%;"></iframe>
 
-  <iframe id="miframe" src="./assets/blog/overview/mtp-err0r-overv.html" frameborder="0" scrolling="no" allowtransparency="true" onload='javascript:(function(o){o.style.height=o.contentWindow.document.body.scrollHeight+"px";}(this));' style="height:300px;width:100%;border:none;overflow:hidden;"></iframe>
+  <style>
+    div#slider figure {
+      position: relative;
+    width: 500%;
+    margin: 0;
+    left: 0;
+    text-align: left;
+    font-size: 0;
+    animation: 25s sliding ease infinite;
+    }
+    figure iframe{
+      width: 305px;height: 345px;margin: 0 20px;border: none;
+    }
 
-  <iframe id="iframe" src="footer.html" frameborder="0" scrolling="no" style="overflow-y: hidden;width:100%;height: 190px"></iframe>
+    @keyframes sliding {
+      0% {
+        left: 0%;
+      }
+
+      20% {
+        left: -70%;
+      }
+      /*
+      40% {
+        left: -200%;
+      }
+
+      60% {
+        left: -300%;
+      }
+
+      80% {
+        left: -400%;
+      }*/
+
+      100% {
+        left: 0%;
+      }
+    }
+  </style>
+  <div class="auto-slider"style="position: relative;box-sizing: content-box;display: block;background: transparent;margin: auto;overflow: hidden;border-radius: 4px;box-shadow: 1px 1px 6px rgb(0 0 0 / 40%);">
+   <div id="slider" style="overflow: hidden;">
+      <figure style="display: flex;height: 345px;">
+
+      </figure>
+    </div>
+  </div>
+
+  <iframe id="miframe" src="./assets/blog/overview/mtp-err0r-overv.html" frameborder="0" scrolling="no"
+    allowtransparency="true"
+    onload='javascript:(function(o){o.style.height=o.contentWindow.document.body.scrollHeight+"px";}(this));'
+    style="height:300px;width:100%;border:none;overflow:hidden;"></iframe>
+
+  <iframe id="iframe" src="footer.html" frameborder="0" scrolling="no"
+    style="overflow-y: hidden;width:100%;height: 190px"></iframe>
   <!-- Global site tag (gtag.js) - Google Analytics -->
-  
+
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-213985754-1"></script>
 
   <script>
@@ -31,25 +83,25 @@
     gtag('config', 'UA-213985754-1');
   </script>
   <script>
-    $( "iframe" ).on('load',function() {
-        document.title = document.getElementById("miframe").contentDocument.title;
+    $("iframe").on('load', function () {
+      document.title = document.getElementById("miframe").contentDocument.title;
     });
-</script>
-<script>
-var dir = "assets/blog/article/";
-var fileextension = ".html";
-$.ajax({
-    //This will retrieve the contents of the folder if the folder is configured as 'browsable'
-    url: dir,
-    success: function (data) {
+  </script>
+  <script>
+    var dir = "assets/blog/article/new";
+    var fileextension = ".html";
+    $.ajax({
+      //This will retrieve the contents of the folder if the folder is configured as 'browsable'
+      url: dir,
+      success: function (data) {
         //List all .png file names in the page
         $(data).find("a:contains(" + fileextension + ")").each(function () {
-            var filename = this.href.replace(window.location.host, "").replace("http://", "");
-            $("body").append("<iframe src='" + dir + filename + "'>");
+          var filename = this.href.replace(window.location.host, "").replace("http://", "");
+          $("figure").append("<iframe scrolling='0' src='" + filename + "'>");
         });
-    }
-});
-</script>
+      }
+    });
+  </script>
 </body>
 
 </html>
