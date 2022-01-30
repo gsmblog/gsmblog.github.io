@@ -54,26 +54,33 @@
       }
     }
   </style>
-  <div class="auto-slider"style="position: relative;box-sizing: content-box;display: block;background: transparent;margin: auto;overflow: hidden;border-radius: 4px;box-shadow: 1px 1px 6px rgb(0 0 0 / 40%);">
+  <!-- <div class="auto-slider"style="position: relative;box-sizing: content-box;display: block;background: transparent;margin: auto;overflow: hidden;border-radius: 4px;box-shadow: 1px 1px 6px rgb(0 0 0 / 40%);">
    <div id="slider" style="overflow: hidden;">
       <figure style="display: flex;height: 345px;">
 
       </figure>
     </div>
-  </div>
+  </div> -->
 
-  <iframe id="miframe" src="./assets/blog/overview/mtp-err0r-overv.html" frameborder="0" scrolling="no"
+  <iframe id="miframe" src="./categories/blog/overv/mtp-err0r-overv.html" frameborder="0" scrolling="no"
     allowtransparency="true"
     onload='javascript:(function(o){o.style.height=o.contentWindow.document.body.scrollHeight+"px";}(this));'
     style="height:300px;width:100%;border:none;overflow:hidden;"></iframe>
 
-  <iframe id="iframe" src="footer.html" frameborder="0" scrolling="no"
-    style="overflow-y: hidden;width:100%;height: 190px"></iframe>
+  <object data="" type="" >
+    <embed src="./footer.html" type="" 
+    style="height:130px;width:100%;border:none;overflow:hidden;">
+  </object>
+
+  <!-- <iframe id="iframe" src="footer.html" frameborder="0" scrolling="no" 
+    style="overflow-y: hidden;width:100%;height: 190px"></iframe>-->
   <!-- Global site tag (gtag.js) - Google Analytics -->
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-213985754-1"></script>
 
   <script>
+
+
     window.dataLayer = window.dataLayer || [];
 
     function gtag() {
@@ -88,8 +95,8 @@
       document.title = document.getElementById("miframe").contentDocument.title;
     });
   </script>
-  <script>
-    var dir = "./assets/blog/article/new";
+  <!-- <script>
+    var dir = "/categories/blog/new";
     var fileextension = ".html";
     $.ajax({
       //This will retrieve the contents of the folder if the folder is configured as 'browsable'
@@ -97,12 +104,12 @@
       success: function (data) {
         //List all .html file names in the page
         $(data).find("a:contains(" + fileextension + ")").each(function () {
-          var filename = this.href.replace(window.location, "").replace("http://", "");
+          var filename = this.href.replace(window.location.host, "").replace("http://", "");
           $("figure").append("<iframe scrolling='0' src='" + filename + "'>");
         });
       }
     });
-  </script>
+  </script> -->
 </body>
 
 </html>

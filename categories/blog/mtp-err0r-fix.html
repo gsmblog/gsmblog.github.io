@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <meta property="og:title" content="MTP Drivers fix" />
+    <meta property="og:type" content="video.movie" />
+    <meta property="og:url" content="https://gsmblog.github.io/assets/overview/c/mtp-err0r-fix.html" />
+    <meta property="og:image" content="https://gsmblog.github.io/assets/data/mtp-usb-device-failed-installation.png" />
+    <title>Mtp driver error Fix </title>
+</head>
+
+<body>
+    <main>
+
+        <article class="main-article">
+            <div class="container container--narrow flow">
+
+                <h1 class="article-title">
+                    MTP USB Device Driver Failed Problem: easy to fix!
+                </h1>
+                <p>
+                    If you’re connecting your mobile phone to your computer, and you see a message saying <span
+                        class="bold">MTP USB Device</span> Failed, you’re not alone. Many Windows users are reporting
+                    it. No worries, it’s possible to fix. Here are some <span class="bold">Quick</span> fixes for you to
+                    try.
+                </p>
+                <figure class="main-article__figure">
+                    <img src="/categories/data/mtp-usb-device-failed-installation.png" style="margin: 50px auto;"
+                        alt="MTP-driver-error">
+                    <figcaption>
+                        First we need to know about <span class="bold">MTP</span> (Media Transfer Protocol) that we used
+                        between our mobile devices to pc for tranfering any thing!
+
+                    </figcaption>
+                </figure>
+                <p id="h-parag" style="color: var(--clr-primary-400);font-size: 32px;font-family:'OfficeCodeProB';">overview</p>
+                <figure id="paragraph" style="font-size: 24px;word-spacing: 5px;line-height: 2;">
+                    The main purpose of this protocol is to allow only the transfer of media files and associated
+                    metadata to and from portable devices, one transfer function, in or out, at a time. It does not
+                    support operations such as open, edit and modify. A workaround is to copy to the hosting system for
+                    these operations and then copy back. A battery-powered mobile device can report its battery charge
+                    level through MTP.
+
+                    The protocol was originally implemented for use across USB but extended for use across TCP/IP and
+                    Bluetooth. Windows Vista supports MTP over TCP/IP. Windows 7 and Windows Vista with the Platform
+                    Update for Windows Vista also support MTP over Bluetooth. The host connecting to an MTP device is
+                    called an MTP Initiator whereas the device itself is an MTP Responder.
+
+                    A main reason for using MTP rather than, for example, the USB mass-storage device class (MSC) is
+                    that the latter operates at the granularity of a mass storage device block (usually in practice, a
+                    FAT block), rather than at the logical file level. In other words, the USB mass storage class is
+                    designed to give a host computer undifferentiated access to bulk mass storage, such as compact
+                    flash, rather than to a file system, which might be safely shared with the target device (except for
+                    specific files which the host might be modifying/accessing). In practice, therefore, when a USB host
+                    computer has mounted an MSC partition, it assumes absolute control of the storage, which then may
+                    not be safely modified by the device without risk of data corruption until the host computer has
+                    severed the connection. Furthermore, because the host computer has full control over the connected
+                    storage device, there is a risk that the host computer may corrupt the file system, reformat it to a
+                    file system not supported by the USB device, or otherwise modify it in such a way that the USB
+                    device cannot completely understand it.
+
+                    MTP and PTP specifically overcome this issue by making the unit of managed storage a local file
+                    rather than an entire (possibly very large) unit of mass storage at the block level. In this way,
+                    MTP works like a transactional file system - either the entire file is written/read or nothing. The
+                    storage media is not affected by failed transfers.
+
+                    Where the device maintains a database/index of the content of the disk, MTP saves the cost of
+                    re-scanning the entire disk every time the content is modified.
+
+                    Additionally, the MTP allows MTP Initiators to identify the specific capabilities of device(s) with
+                    respect to file formats and functionality. In particular, MTP Initiators may have to provide
+                    passwords and other information to unlock files, or otherwise enable digital rights management.
+                    Nothing specific of this nature is in the core standard but the features are available via vendor
+                    extensions. MTPZ, the Zune Extension to MTP specifically denies access to files until authentication
+                    has been processed, which is only possible using Windows Media Player 10 or higher.
+                </figure>
+                <p id="h-parag" style="color: var(--clr-primary-400);font-size: 32px;font-family:'OfficeCodeProB';">Let's move on topic</p>
+                <figure id="paragraph" style="font-size: 24px;word-spacing: 5px;line-height: 2;">
+                    According to mine and how i solve that Problem<br>First update your System drivers mean USB hub controller drivers by using free online tool <span>Driver Booster</span> install and open it this will auto detect and install drivers that are missing from your pc!
+                    <br>
+                    This problem occour when we install other vendors drivers that use MTP protocol ,other drivers confilting with preinstalled drivers provided by microsoft working perfectly
+                     when we clean install windows & then attach android device and our pc automatically detect model of device without problem 
+                    when we install any GSM device software like Chimera this software install all drivers include mtp that develops by chimera holder this make confilting and say errors
+                    <br>
+                    Errors comeup because in I/O unit oprating system using Interface between devices for avoiding from data corruption/confilting
+                    so when we install other drivers from other vendor provider/maker have different mind to solve so that why driver included in software for working these software perfect <br>
+                    so when  device is attached Interface id is changed and Pc don't Detect device some developers develop Tool that help here to move out from Interface id confilting
+                    <br>
+                    let's move to tool that help us here!
+                </figure>
+
+                <a href="http://https://en.wikipedia.org/wiki/Media_Transfer_Protocol" target="_blank" rel="noopener noreferrer">Source</a>
+            </div>
+        </article>
+    </main>
+</body>
+
+</html>
