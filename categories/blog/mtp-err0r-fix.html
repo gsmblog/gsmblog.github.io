@@ -112,21 +112,32 @@
             </div>
         </article>
     </main>
+    <div id="fiframe">
+
+    </div>
     <script>
         var chknframe = window.parent.$("#niframe");
+        var chkfframe = window.parent.$("#fiframe");
+        var fifrm = document.createElement("iframe");
         var nifrm = document.createElement("iframe");
         if (window.parent.document.getElementById("niframe")) {
             // div exists
             window.parent.document.getElementById("niframe").contents().remove();
+
         } else {
             // OOPS div missing
             nifrm.setAttribute("src", "https://gsmblog.cf/nav.html");
             nifrm.style.width = "100%";
             nifrm.style.height = "auto";
             nifrm.style.border="none";
-            nifrm.frameborder="0";
             nifrm.scrolling="no";
             document.getElementById("nframe").append(nifrm);
+            fifrm.setAttribute("src" , "https://gsmblog.cf/footer.html");
+            fifrm.style.width = "100%";
+            fifrm.style.height = "auto";
+            fifrm.style.border="none";
+            fifrm.scrolling="no";
+            document.getElementById("fiframe").append(fifrm);
         }
     </script>
     <!-- <script type="text/javascript">

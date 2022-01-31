@@ -14,7 +14,7 @@
 <body>
   
   <iframe id="niframe" name="niframe" src="nav.html" frameborder="0" scrolling="no" style="width: 100%;"></iframe>
-  <button onclick="history.back(), document.getElementById('miframe').src = document.getElementById('miframe').src;">Go Back</button>
+  <button onclick="history.back(), window.parent.location.reload();">Go Back</button>
   <style>
     div#slider figure {
       position: relative;
@@ -68,10 +68,8 @@
     onload='javascript:(function(o){o.style.height=o.contentWindow.document.body.scrollHeight+"px";}(this));'
     style="height:300px;width:100%;border:none;overflow:hidden;"></iframe>
 
-  <object data="" type="" >
-    <embed src="./footer.html" id="fiframe" type="" 
-    style="height:130px;width:100%;border:none;overflow:hidden;">
-  </object>
+  <iframe src="./footer.html" id="fiframe" frameborder="0" scrolling="no" style="height:130px;width:100%;border:none;overflow:hidden;"></iframe>
+
   <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
   <!-- <iframe id="iframe" src="footer.html" frameborder="0" scrolling="no" 
