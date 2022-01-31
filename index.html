@@ -12,8 +12,9 @@
 </head>
 
 <body>
-  <iframe id="iframe" src="nav.html" frameborder="0" scrolling="no" style="width: 100%;"></iframe>
-
+  
+  <iframe id="niframe" name="niframe" src="nav.html" frameborder="0" scrolling="no" style="width: 100%;"></iframe>
+  <button onclick="history.back(), document.getElementById('miframe').src = document.getElementById('miframe').src;">Go Back</button>
   <style>
     div#slider figure {
       position: relative;
@@ -62,15 +63,16 @@
     </div>
   </div> -->
 
-  <iframe id="miframe" src="./categories/blog/overv/mtp-err0r-overv.html" frameborder="0" scrolling="no"
+  <iframe id="miframe" name="miframe" src="./categories/blog/overv/mtp-err0r-overv.html" frameborder="0" scrolling="no"
     allowtransparency="true"
     onload='javascript:(function(o){o.style.height=o.contentWindow.document.body.scrollHeight+"px";}(this));'
     style="height:300px;width:100%;border:none;overflow:hidden;"></iframe>
 
   <object data="" type="" >
-    <embed src="./footer.html" type="" 
+    <embed src="./footer.html" id="fiframe" type="" 
     style="height:130px;width:100%;border:none;overflow:hidden;">
   </object>
+  <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
   <!-- <iframe id="iframe" src="footer.html" frameborder="0" scrolling="no" 
     style="overflow-y: hidden;width:100%;height: 190px"></iframe>-->
@@ -95,6 +97,7 @@
       document.title = document.getElementById("miframe").contentDocument.title;
     });
   </script>
+  <script src="script.js"></script>
   <!-- <script>
     var dir = "/categories/blog/new";
     var fileextension = ".html";

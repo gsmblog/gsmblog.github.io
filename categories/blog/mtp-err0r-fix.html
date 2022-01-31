@@ -8,12 +8,16 @@
     <link rel="stylesheet" href="/style.css">
     <meta property="og:title" content="MTP Drivers fix" />
     <meta property="og:type" content="video.movie" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <meta property="og:url" content="https://gsmblog.github.io/assets/overview/c/mtp-err0r-fix.html" />
     <meta property="og:image" content="https://gsmblog.github.io/assets/data/mtp-usb-device-failed-installation.png" />
     <title>Mtp driver error Fix </title>
 </head>
 
 <body>
+    <div id="nframe">
+    
+    </div>
     <main>
 
         <article class="main-article">
@@ -37,7 +41,8 @@
 
                     </figcaption>
                 </figure>
-                <p id="h-parag" style="color: var(--clr-primary-400);font-size: 32px;font-family:'OfficeCodeProB';">overview</p>
+                <p id="h-parag" style="color: var(--clr-primary-400);font-size: 32px;font-family:'OfficeCodeProB';">
+                    overview</p>
                 <figure id="paragraph" style="font-size: 24px;word-spacing: 5px;line-height: 2;">
                     The main purpose of this protocol is to allow only the transfer of media files and associated
                     metadata to and from portable devices, one transfer function, in or out, at a time. It does not
@@ -78,25 +83,61 @@
                     extensions. MTPZ, the Zune Extension to MTP specifically denies access to files until authentication
                     has been processed, which is only possible using Windows Media Player 10 or higher.
                 </figure>
-                <p id="h-parag" style="color: var(--clr-primary-400);font-size: 32px;font-family:'OfficeCodeProB';">Let's move on topic</p>
+                <p id="h-parag" style="color: var(--clr-primary-400);font-size: 32px;font-family:'OfficeCodeProB';">
+                    Let's move on topic</p>
                 <figure id="paragraph" style="font-size: 24px;word-spacing: 5px;line-height: 2;">
-                    According to mine and how i solve that Problem<br>First update your System drivers mean USB hub controller drivers by using free online tool <span>Driver Booster</span> install and open it this will auto detect and install drivers that are missing from your pc!
+                    According to mine and how i solve that Problem<br>First update your System drivers mean USB hub
+                    controller drivers by using free online tool <span>Driver Booster</span> install and open it this
+                    will auto detect and install drivers that are missing from your pc!
                     <br>
-                    This problem occour when we install other vendors drivers that use MTP protocol ,other drivers confilting with preinstalled drivers provided by microsoft working perfectly
-                     when we clean install windows & then attach android device and our pc automatically detect model of device without problem 
-                    when we install any GSM device software like Chimera this software install all drivers include mtp that develops by chimera holder this make confilting and say errors
+                    This problem occour when we install other vendors drivers that use MTP protocol ,other drivers
+                    confilting with preinstalled drivers provided by microsoft working perfectly
+                    when we clean install windows & then attach android device and our pc automatically detect model of
+                    device without problem
+                    when we install any GSM device software like Chimera this software install all drivers include mtp
+                    that develops by chimera holder this make confilting and say errors
                     <br>
-                    Errors comeup because in I/O unit oprating system using Interface between devices for avoiding from data corruption/confilting
-                    so when we install other drivers from other vendor provider/maker have different mind to solve so that why driver included in software for working these software perfect <br>
-                    so when  device is attached Interface id is changed and Pc don't Detect device some developers develop Tool that help here to move out from Interface id confilting
+                    Errors comeup because in I/O unit oprating system using Interface between devices for avoiding from
+                    data corruption/confilting
+                    so when we install other drivers from other vendor provider/maker have different mind to solve so
+                    that why driver included in software for working these software perfect <br>
+                    so when device is attached Interface id is changed and Pc don't Detect device some developers
+                    develop Tool that help here to move out from Interface id confilting
                     <br>
                     let's move to tool that help us here!
                 </figure>
 
-                <a href="http://https://en.wikipedia.org/wiki/Media_Transfer_Protocol" target="_blank" rel="noopener noreferrer">Source</a>
+                <a href="http://https://en.wikipedia.org/wiki/Media_Transfer_Protocol" target="_blank"
+                    rel="noopener noreferrer">Source</a>
             </div>
         </article>
     </main>
+    <script>
+        var chknframe = window.parent.$("#niframe");
+        var nifrm = document.createElement("iframe");
+        if (window.parent.document.getElementById("niframe")) {
+            // div exists
+            window.parent.document.getElementById("niframe").contents().remove();
+        } else {
+            // OOPS div missing
+            nifrm.setAttribute("src", "https://gsmblog.cf/nav.html");
+            nifrm.style.width = "100%";
+            nifrm.style.height = "auto";
+            nifrm.style.border="none";
+            nifrm.frameborder="0";
+            nifrm.scrolling="no";
+            document.getElementById("nframe").append(nifrm);
+        }
+    </script>
+    <!-- <script type="text/javascript">
+        function prepareFrame() {
+            var ifrm = document.createElement("iframe");
+            ifrm.setAttribute("src", "https://gsmblog.cf/nav.html");
+            ifrm.style.width = "640px";
+            ifrm.style.height = "480px";
+            document.body.appendChild(ifrm);
+        }
+    </script> -->
 </body>
 
 </html>
