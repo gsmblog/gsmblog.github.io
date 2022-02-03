@@ -1,9 +1,14 @@
 <link rel="stylesheet" href="style.css">
+<script>
+  function wReload(){
+    window.parent.location.reload();window.parent.document.getElementById('#miframe').src = window.history.go(-1); return false;
+  }
+</script>
 <header class="page-header">
   <div class="container">
     <div class="page-header__content">
       <div id="logo">
-        <a  onclick="history.back(), window.parent.location.reload();"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1325.85 670.3" style="width: 150px;">
+        <a  onclick="wReload()" target="_parent"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1325.85 670.3" >
           <defs>
             <style>
               .cls-1 {
@@ -35,7 +40,7 @@
 
         <ul role="list" class="nav-list flex-group" style="margin:auto 0;">
           <li>
-            <a onclick="window.parent.location.reload() ">Home</a>
+            <a onclick="wReload()">Home</a>
           </li>
           <li>
             <a onclick="window.open('./assets/blog/blog.html')">Blog</a>
@@ -62,18 +67,19 @@
   nav ul {
     margin: auto 0;
   }
-
-  @media (max-width: 1220px) {
-    #logo {
-      margin: 0 0 0 0
-    }
-  }
-
+  svg {width: 150px;}
   svg .cls-2 {
     opacity: 0;
     animation: flashB 1s cubic-bezier(0.645,
         0.045, 0.355, 1) infinite;
   }
+  @media (max-width: 1220px) {
+    #logo {
+      margin: 0 0 10 0;
+    }
+    svg{width: 100px;}
+  }
+  
 
   @keyframes flashB {
     0% {

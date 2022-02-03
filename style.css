@@ -74,7 +74,7 @@ figure,
 blockquote,
 dl,
 dd {
-  margin: 0;font-size: 24px;
+  margin: 0;
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
@@ -92,7 +92,7 @@ html:focus-within {
 
 /* Set core body defaults */
 body {
-  min-height: 100vh;
+  height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
 }
@@ -508,3 +508,5 @@ section,
       }
     }*/
   
+/* wmain*/
+.wmain{height: 100vh;}

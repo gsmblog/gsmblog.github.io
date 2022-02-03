@@ -47,7 +47,7 @@
                 <img src="/categories/data/usb-type-a-connector.webp" style="margin: 50px auto;" alt="Usb-cable">
                 <p id="h-parag" style="color: var(--clr-primary-400);font-size: 32px;font-family:'OfficeCodeProB';">
                     overview</p>
-                <figure id="paragraph" style="font-size: 24px;word-spacing: 5px;line-height: 2;">
+                <figure id="paragraph">
                     The main purpose of this protocol is to allow only the transfer of media files and associated
                     metadata to and from portable devices, one transfer function, in or out, at a time. It does not
                     support operations such as open, edit and modify. A workaround is to copy to the hosting system for
@@ -89,7 +89,7 @@
                 </figure>
                 <p id="h-parag" style="color: var(--clr-primary-400);font-size: 32px;font-family:'OfficeCodeProB';">
                     Let's move on topic</p>
-                <figure id="paragraph" style="font-size: 24px;word-spacing: 5px;line-height: 2;">
+                <figure id="sub-paragraph" >
                     According to mine and how i solve that Problem<br>First update your System drivers mean USB hub
                     controller drivers by using free online tool <span>Driver Booster</span> install and open it this
                     will auto detect and install drivers that are missing from your pc!
@@ -119,6 +119,14 @@
     <div id="fiframe">
 
     </div>
+    <style>
+        figure #paragraph,#sub-paragraph{
+            font-size: var(--fs-400);word-spacing: 5px;line-height: 2;
+        }
+        @media (max-width: 1220px){
+            figure #paragraph,#sub-paragraph{font-size: var(--fs-300);}
+        }
+    </style>
     <script>
         var chknframe = window.parent.$("#niframe");
         var chkfframe = window.parent.$("#fiframe");
