@@ -462,3 +462,49 @@ section,
 @media (max-width:1200px){
   #fiframe{height: 300px;}
 }
+  /*Slider*/
+/*
+    div#slider figure {
+      position: relative;
+      width: 500%;
+      margin: 0;
+      left: 0;
+      text-align: left;
+      font-size: 0;
+      animation: 25s sliding ease infinite;
+    }
+
+    figure iframe {
+      width: 305px;
+      height: 345px;
+      margin: 0 20px;
+      border: none;
+    }
+
+    @keyframes sliding {
+      0% {
+        left: 0%;
+      }
+
+      20% {
+        left: -70%;
+      }
+
+      /*
+      40% {
+        left: -200%;
+      }
+
+      60% {
+        left: -300%;
+      }
+
+      80% {
+        left: -400%;
+      }*/
+      /*
+      100% {
+        left: 0%;
+      }
+    }*/
+  

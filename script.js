@@ -17,3 +17,11 @@ function topFunction() {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
+
+
+
+
+function devpop() {
+  document.getElementById("devpop").style.display = "none";
+}
+
