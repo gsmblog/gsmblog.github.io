@@ -3,16 +3,42 @@
   <div class="container">
     <div class="page-header__content">
       <div id="logo">
-        <h2 >Gsm Blog</h2>
+        <a onclick="window.parent.location.reload()"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1325.85 670.3" style="width: 150px;">
+          <defs>
+            <style>
+              .cls-1 {
+                fill: #ff6700;
+              }
+
+              .cls-2 {
+                fill: #ff9248;
+              }
+            </style>
+          </defs>
+          <g id="Layer_2" data-name="Layer 2">
+            <g id="Layer_1-2" data-name="Layer 1">
+              <path class="cls-1"
+                d="M583.89,629.56q-30.63,19-70.92,29.87T424,670.3q-104.16,0-166.19-55T195.75,450q0-100.47,63-167.26T433.17,216a403.56,403.56,0,0,1,76.89,6.9q35.54,6.88,73.83,22.51L553,322a329.44,329.44,0,0,0-58.82-17.77,317.31,317.31,0,0,0-61-5.51q-61.57,0-97.42,36.91T299.91,445.44q0,73.23,35.69,107.53t93,34.31a186.41,186.41,0,0,0,31.86-2.45,105.09,105.09,0,0,0,24.51-7.05V491.4H397v-79H583.89Z"
+                transform="translate(-195.75)" />
+              <path class="cls-1"
+                d="M633.52,633.54l41.05-76.89q33.07,19.61,57.44,26.5A187.72,187.72,0,0,0,783.32,590q35.53,0,52.38-13.63t16.85-37.22q0-22.68-13.48-34.77T789.45,484q-73.53-16.85-106.92-47.79t-33.39-86.38q0-55.75,43.19-94.82t121-39.06a276.79,276.79,0,0,1,63.72,7.36,271.58,271.58,0,0,1,59.43,21.44l-37.07,78.12q-25.42-14.4-47.79-20.53T810,296.26q-29.72,0-46.26,11.64t-16.54,33.39q0,19.92,15.16,30.63t54.38,19.61q71.37,16.25,103.24,48.4t31.86,90.68q0,62.49-44,101.09T780.26,670.3q-36.46,0-76.28-9.65T633.52,633.54Z"
+                transform="translate(-195.75)" />
+              <path class="cls-1"
+                d="M1521.61,662.64h-97.73V399.8q0-21.14.92-44.73t2.76-49.32h-2.45q-4,20.22-7.2,34.77a174.15,174.15,0,0,1-6.59,23.44L1308.39,662.64h-80.87L1122.75,367q-1.85-6.12-5.52-21.44T1109,305.75h-2.76q2.15,32.47,3.07,61t.92,53V662.64H1021V223.35h144.9l89.76,260.39a240,240,0,0,1,9,28.79q3.51,14.41,6.58,29.11h1.84q4.29-16.54,8.58-31.25t8.88-27.26l89.76-259.78h141.23Z"
+                transform="translate(-195.75)" />
+              <path class="cls-2" d="M818.51,80h62.2l-80,115.52v-80h-62.2L818.51,0Z" transform="translate(-195.75)" />
+            </g>
+          </g>
+        </svg></a>
       </div>
       <nav>
-        
-        <ul role="list" class="nav-list flex-group">
+
+        <ul role="list" class="nav-list flex-group" style="margin:auto 0;">
           <li>
             <a href="https://gsmblog.cf" target="_blank">Home</a>
           </li>
           <li>
-            <a  onclick="window.open('./assets/blog/blog.html')">Blog</a>
+            <a onclick="window.open('./assets/blog/blog.html')">Blog</a>
           </li>
         </ul>
       </nav>
@@ -21,9 +47,73 @@
 </header>
 
 <style>
-  #logo{margin:0 0 0 -50px ;}
+  #logo {
+    margin: 0 0 0 -50px;
+  }
 
   @media (max-width: 1220px) {
-    #logo{margin:0 0 0 0}
+    #logo {
+      margin: 0 0 0 0
+    }
+  }
+
+  nav {
+    display: flex;
+  }
+
+  nav ul {
+    margin: auto 0;
+  }
+
+  svg .cls-2 {
+    opacity: 0;
+    animation: flashB 1s cubic-bezier(0.645,
+        0.045, 0.355, 1) infinite;
+  }
+
+  @keyframes flashB {
+    0% {
+      opacity: 0
+    }
+
+    1% {
+      opacity: 0.1
+    }
+
+    20% {
+      opacity: 0.2
+    }
+
+    30% {
+      opacity: 0.3
+    }
+
+    40% {
+      opacity: 0.4
+    }
+
+    50% {
+      opacity: 0.5
+    }
+
+    60% {
+      opacity: 0.6
+    }
+
+    70% {
+      opacity: 0.7
+    }
+
+    80% {
+      opacity: 0.8
+    }
+
+    90% {
+      opacity: 0.9
+    }
+
+    100% {
+      opacity: 1
+    }
   }
 </style>
