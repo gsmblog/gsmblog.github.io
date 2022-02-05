@@ -510,3 +510,13 @@ section,
   
 /* wmain*/
 .wmain{height: 100vh;}
+/*fiframe - iframe footer*/
+#fiframe{width: 100%;
+  height: 130px;
+  border: medium none;
+  position: absolute;
+  bottom: 0px;
+  margin: auto 0 auto 0;}
+  @media (max-width:1200px){
+   #fiframe{width: 200px;}
+ } 
