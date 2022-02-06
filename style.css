@@ -518,5 +518,5 @@ section,
   bottom: 0px;
   margin: auto 0 auto 0;}
   @media (max-width:1200px){
-   #fiframe{width: 200px;}
+   #fiframe{height: 200px;}
  } 
