@@ -42,17 +42,21 @@
     </div>
   </div> -->
 
-    <iframe id="miframe" name="miframe" src="./categories/blog/overv/mtp-err0r-overv.html" frameborder="0"
+    <iframe id="iframe"  name="iframe" src="./categories/blog/overv/mtp-err0r-overv.html" frameborder="0"
+      scrolling="no" allowtransparency="true"
+      onload='javascript:(function(o){o.style.height=o.contentWindow.document.body.scrollHeight+"px";}(this));'
+      style="height:300px;width:100%;border:none;overflow:hidden;"></iframe>
+      
+    <iframe id="iframe" name="iframe"  src="/categories/android/overv/screen-lock-already-changed-overv.html" frameborder="0"
       scrolling="no" allowtransparency="true"
       onload='javascript:(function(o){o.style.height=o.contentWindow.document.body.scrollHeight+"px";}(this));'
       style="height:300px;width:100%;border:none;overflow:hidden;"></iframe>
 
-
-    
+    </div>
     <iframe src="./footer.html" id="fiframe" frameborder="0" scrolling="no" ></iframe>
 
     <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
-  </div>
+  
     <!-- <iframe id="iframe" src="footer.html" frameborder="0" scrolling="no" 
     style="overflow-y: hidden;width:100%;height: 190px"></iframe>-->
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -71,7 +75,7 @@
   </script>
   <script>
     $("iframe").on('load', function () {
-      document.title = document.getElementById("miframe").contentDocument.title;
+      document.title = document.getElementById("iframe").contentDocument.title;
     });
   </script>
   <script src="script.js"></script>
